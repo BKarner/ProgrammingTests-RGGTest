@@ -1,5 +1,8 @@
 # RGG Programming Assessment
 
+## Disclaimer:
+1. This is not my "Tidy" iteration of code. I usually do this in passes of "complete" functionality.
+
 ## Requirements
 1. To be developed in Unity 2020.3.25f or a later version.
 
