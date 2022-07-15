@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
-public class HiScoresController : MonoBehaviour
+public class HighScoresController : MonoBehaviour
 {
     public GameObject scoreTableParent;
     public Canvas scoreTemplate;
