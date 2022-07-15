@@ -4,17 +4,8 @@ using UnityEngine;
 
 public static class HighScores
 {
-    public static List<HighScoreEntry> highScoreList;
+    public static List<HighScoreEntry> highScoreList = new List<HighScoreEntry>();
     public static int maxScores = 10;
-
-    /**
-     * When we awake, load out high scores.
-     */
-    public static void Awake()
-    {
-        string listJSON = PlayerPrefs.GetString("highScoreTable");
-        highScoreList = JsonUtility.FromJson<List<HighScoreEntry>>(listJSON);
-    }
 
     /**
      * Save our high scores list off into the player prefs.
@@ -32,12 +23,11 @@ public static class HighScores
      */
     public static void Reset()
     {
-        // Create an empty string to become the high score table.
-        string listJSON = "";
+        // Create a new empty list and save that to our JSON.
+        highScoreList = new List<HighScoreEntry>();
+        string listJSON = JsonUtility.ToJson(highScoreList);
         PlayerPrefs.SetString("highScoreTable", listJSON);
         PlayerPrefs.Save();
-
-        highScoreList = JsonUtility.FromJson<List<HighScoreEntry>>(listJSON);
     }
 
     /**
@@ -56,7 +46,7 @@ public static class HighScores
                 continue;
             } else {
                 // Must at this point be more than or equal to another score.
-                highScoreList.Insert(i, entry);
+                highScoreList.Insert(i, newEntry);
                 
                 // Remove our lowest score.
                 if (highScoreList.Count > maxScores)
