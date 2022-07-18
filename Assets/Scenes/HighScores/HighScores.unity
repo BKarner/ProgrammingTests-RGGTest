@@ -208,6 +208,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1801864962}
+        m_TargetAssemblyTypeName: GenericUIController, Assembly-CSharp
+        m_MethodName: PlaySimpleSound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b1851dc54c0aac146b8756f8a76018f1, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1801864962}
         m_TargetAssemblyTypeName: HiScoresController, Assembly-CSharp
         m_MethodName: OpenScene
         m_Mode: 5
@@ -1093,6 +1105,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1801864962}
+        m_TargetAssemblyTypeName: GenericUIController, Assembly-CSharp
+        m_MethodName: PlaySimpleSound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b1851dc54c0aac146b8756f8a76018f1, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1801864962}
         m_TargetAssemblyTypeName: HiScoresController, Assembly-CSharp
         m_MethodName: ResetScores
         m_Mode: 1
@@ -1343,6 +1367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e7a27cc99847040bd61748a8637ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuAudio: {fileID: 0}
   scoreTableParent: {fileID: 1591264325}
   scoreTemplate: {fileID: 1646480629}
 --- !u!1 &1843298632
