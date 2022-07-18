@@ -25,9 +25,7 @@ public static class HighScores
     {
         // Create a new empty list and save that to our JSON.
         highScoreList = new List<HighScoreEntry>();
-        string listJSON = JsonUtility.ToJson(highScoreList);
-        PlayerPrefs.SetString("highScoreTable", listJSON);
-        PlayerPrefs.Save();
+        Save();
     }
 
     /**
