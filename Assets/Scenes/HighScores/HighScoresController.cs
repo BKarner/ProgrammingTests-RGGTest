@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
-public class HighScoresController : MonoBehaviour
+public class HighScoresController : GenericUIController
 {
     /**
      * The parent table to add our generated table entries to.
@@ -32,6 +32,7 @@ public class HighScoresController : MonoBehaviour
      */
     public void Start()
     {
+        base.Start();
         LoadScores();
     }
 
@@ -92,13 +93,5 @@ public class HighScoresController : MonoBehaviour
     {
         HighScores.Reset();
         LoadScores();
-    }
-
-    /**
-     * Open a scene with the given name.
-     */
-    public void OpenScene(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
     }
 }

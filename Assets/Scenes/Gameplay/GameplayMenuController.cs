@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameplayMenuController : MonoBehaviour
+public class GameplayMenuController : GenericUIController
 {
     /**
      * Generic "Start".
@@ -12,6 +12,7 @@ public class GameplayMenuController : MonoBehaviour
      */
     public void Start()
     {
+        base.Start();
         GenerateScores(5, 0, 100);
     }
 
@@ -40,13 +41,5 @@ public class GameplayMenuController : MonoBehaviour
         // Reload our scene.
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
-    }
-
-    /**
-     * Open a scene from the menu with a given scene name.
-     */
-    public void OpenScene(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
     }
 }
