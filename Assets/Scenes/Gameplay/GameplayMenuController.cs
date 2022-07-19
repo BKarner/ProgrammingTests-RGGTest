@@ -33,9 +33,7 @@ public class GameplayMenuController : GenericUIController
         }
     }
 
-    /**
-     * Reset the level by re-opening the scene.
-     */
+    // Reset the level by re-opening the scene.
     public void ResetGame()
     {
         // Reload our scene.

@@ -5,39 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class GenericUIController : MonoBehaviour
 {
-    /**
-     * Create an audio source to use for button effects.
-     */
+    // Create an audio source to use for button effects.
     public AudioSource menuAudio;
 
-    /**
-     * Called when the scene starts.
-     */
+    // Called when the scene starts.
     public void Start()
     {
         menuAudio = gameObject.AddComponent<AudioSource>();
     }
 
-    /**
-     * Play a simple UI sound.
-     */
+    // Play a simple UI sound.
     public void PlaySimpleSound(AudioClip sound)
     {
         menuAudio.clip = sound;
         menuAudio.Play();
     }
 
-    /**
-     * Open a scene from the menu with the given scene name.
-     */
+    //Open a scene from the menu with the given scene name.
     public void OpenScene(string sceneName)
     {
         StartCoroutine(StartOpenRoutine(sceneName));
     }
 
-    /**
-     * Put our delay in for opening the scene for if there's any menu UI. Input sound should finish.
-     */
+    // Put our delay in for opening the scene for if there's any menu UI. Input sound should finish.
     IEnumerator StartOpenRoutine(string sceneName)
     {
         yield return new WaitWhile(() => menuAudio.isPlaying);

@@ -7,38 +7,26 @@ using TMPro;
 
 public class HighScoresController : GenericUIController
 {
-    /**
-     * The parent table to add our generated table entries to.
-     */
+    // The parent table to add our generated table entries to.
     public GameObject scoreTableParent;
 
-    /**
-     * The template entry for our generated table entries.
-     */
+    // The template entry for our generated table entries.
     public Canvas scoreTemplate;
 
-    /**
-     * Cached references to our generated table entries.
-     */
+    // Cached references to our generated table entries.
     private List<Canvas> createdCanvases = new List<Canvas>();
 
-    /**
-     * Cached references to our generated score texts.
-     */
+    // Cached references to our generated score texts.
     private List<Text> createdScores = new List<Text>();
 
-    /**
-     * Called when the controller is loaded into the scene.
-     */
+    // Called when the controller is loaded into the scene.
     public void Start()
     {
         base.Start();
         LoadScores();
     }
 
-    /**
-     * Go through each of the score entries and delete them.
-     */
+    // Go through each of the score entries and delete them.
     public void LoadScores()
     {
         int considered = 0;
@@ -86,9 +74,7 @@ public class HighScoresController : GenericUIController
         }
     }
 
-    /**
-     * Reset our static high scores.
-     */
+    // Reset our static high scores.
     public void ResetScores()
     {
         HighScores.Reset();

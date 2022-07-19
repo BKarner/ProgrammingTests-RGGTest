@@ -7,9 +7,7 @@ public static class HighScores
     public static List<HighScoreEntry> highScoreList = new List<HighScoreEntry>();
     public static int maxScores = 10;
 
-    /**
-     * Save our high scores list off into the player prefs.
-     */
+    // Save our high scores list off into the player prefs.
     public static void Save()
     {
         // Turn our serializable list into a string so we can save it.
@@ -18,9 +16,7 @@ public static class HighScores
         PlayerPrefs.Save();
     }
 
-    /**
-     * Reset our High Scores list.
-     */
+    // Reset our High Scores list.
     public static void Reset()
     {
         // Create a new empty list and save that to our JSON.
@@ -28,9 +24,7 @@ public static class HighScores
         Save();
     }
 
-    /**
-     * Add an entry to our high scores.
-     */
+    // Add an entry to our high scores.
     public static void AddEntry(int score)
     {
         HighScoreEntry newEntry = new HighScoreEntry { score = score };
@@ -66,9 +60,7 @@ public static class HighScores
     }
 }
 
-/**
- * Create an entry for the high score. Struct it, for the event of further expansion. (Names etc).
- */
+// Create an entry for the high score. Struct it, for the event of further expansion. (Names etc).
 public struct HighScoreEntry
 {
     public int score;
