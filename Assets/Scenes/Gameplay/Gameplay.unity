@@ -994,6 +994,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08ec866deebba8b44aa8ad36b9cae2f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelSprites:
+  - {fileID: 1044401222, guid: 65e0dd1fc516cfe45862d7d0cac64c28, type: 3}
+  - {fileID: -661044972, guid: 65e0dd1fc516cfe45862d7d0cac64c28, type: 3}
+  - {fileID: -273256568, guid: 65e0dd1fc516cfe45862d7d0cac64c28, type: 3}
+  - {fileID: -286556251, guid: 65e0dd1fc516cfe45862d7d0cac64c28, type: 3}
+  gameWidth: 8
+  gameHeight: 8
+  scoreStructure: 0000000000000000000000006400000096000000e10000002c010000
 --- !u!114 &1165664330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1006,7 +1014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4455d25675cc4e142b069c208a70f30f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 0}
+  scoreText: {fileID: 1589202609}
   currentScore: 0
 --- !u!1 &1586218497
 GameObject:

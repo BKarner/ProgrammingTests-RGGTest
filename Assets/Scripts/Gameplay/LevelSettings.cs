@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class LevelSettings : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int gameWidth = 8;
+    public int gameHeight = 8;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public List<Sprite> levelSprites;
+    public List<int> scoreStructure = new List<int>() { 0, 0, 0, 100, 150, 225, 300 };
 }
